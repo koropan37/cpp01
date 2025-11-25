@@ -12,8 +12,8 @@ int main(void) {
 		<< "The memory address held by stringREF	 : " << &stringREF << "\n"
 		<< "The value of the string variable  : "		 << brain 	   << "\n"
 		<< "The value pointed to by stringPTR : "		 << *stringPTR << "\n"
-		<< " The value pointed to by stringREF: "		 << stringREF
-		<<std::endl;
-
+		<< "The value pointed to by stringREF : "		 << stringREF  << std::endl;
 	return 0;
 }
+//参照(std::string&)は必ず初期化が必要で再代入(stringREF = a)できない
+//ポインタはNULLや再代入できる

@@ -32,6 +32,7 @@ void Harl::complain(std::string level) {
 		std::cerr << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}
 }
+// /* fall through */でbreakまで処理(なくても動いた)
 
 void Harl::debug(void) {
 	std::cout
