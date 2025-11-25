@@ -1,10 +1,11 @@
-NAME = Sed_is_for_losers
+NAME = SedLosers
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
 SRCS = \
-		main.cpp 
+		main.cpp \
+		Losers.cpp
 
 
 OBJS = $(SRCS:%.cpp=%.o)

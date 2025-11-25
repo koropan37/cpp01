@@ -4,17 +4,18 @@
 int main(void) {
 
 	Zombie *ghoul= newZombie("kaneki");
-	randomChump("ken");
 	ghoul->announce();
 	delete ghoul;
+
+	randomChump("ken");
 
 	Zombie z;
 	z.announce();
 	Zombie zz("zz");
 	zz.announce();
 	{
-	Zombie zom("zom");
-	zom.announce();
+		Zombie zom("zom");
+		zom.announce();
 	}
 	return 0;
 }

@@ -1,4 +1,4 @@
-NAME = Unnecessary_violence
+NAME = WeaponHuman
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic

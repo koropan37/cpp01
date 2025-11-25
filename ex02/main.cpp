@@ -16,4 +16,5 @@ int main(void) {
 	return 0;
 }
 //参照(std::string&)は必ず初期化が必要で再代入(stringREF = a)できない
+//参照は中身はアドレスで、外見は値のようなもの
 //ポインタはNULLや再代入できる
