@@ -1,7 +1,7 @@
 #include "Zombie.hpp"
 
 Zombie* zombieHorde( int N, std::string name ) {
-	if(N <= 0)
+	if(N <= 0 || N > 1000000)
 		return NULL;
 	Zombie *zombies = new Zombie[N];
 

@@ -9,23 +9,35 @@ int main(void) {
 	{
 		N = 3;
 		zombies = zombieHorde(N, "mob");
-		for (int i = 0; i < N; ++i)
-			zombies[i].announce();
-		delete[] zombies;
+		if (!zombies) {
+			std::cerr << "allocation failed for N=" << N << std::endl;
+		} else {
+			for (int i = 0; i < N; ++i)
+				zombies[i].announce();
+			delete[] zombies;
+		}
 	}
 	{
-		N = 0;
-		zombies = zombieHorde(N, "zero");
-		for (int i = 0; i < N; ++i)
-			zombies[i].announce();
-		delete[] zombies;
+		N = 2147483647;
+		zombies = zombieHorde(N, "INT_MAX");
+		if (!zombies) {
+			std::cerr << "bad alloc N=" << N << std::endl;
+		} else {
+			for (int i = 0; i < N; ++i)
+				zombies[i].announce();
+			delete[] zombies;
+		}
 	}
 	{
 		N = -1;
-		zombies = zombieHorde(N, "zero");
-		for (int i = 0; i < N; ++i)
-			zombies[i].announce();
-		delete[] zombies;
+		zombies = zombieHorde(N, "minus");
+		if (!zombies) {
+			std::cerr << "bad alloc N=" << N << std::endl;
+		} else {
+			for (int i = 0; i < N; ++i)
+				zombies[i].announce();
+			delete[] zombies;
+		}
 	}
 }
 //delete[] NULLは許容されていて安全(何もしない)
