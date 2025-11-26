@@ -18,13 +18,13 @@ void Harl::complain(std::string level) {
 	{
 	case 0:
 		(this->*pointer_[i++])(); //debug()
-		/* fall through */;
+		/* fall through */
 	case 1:
 		(this->*pointer_[i++])();//info()
-		/* fall through */;
+		/* fall through */
 	case 2:
 		(this->*pointer_[i++])();//warning()
-		/* fall through */;
+		/* fall through */
 	case 3:
 		(this->*pointer_[i])();//error()
 		break;
