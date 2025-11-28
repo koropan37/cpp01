@@ -6,6 +6,7 @@
 class Harl{
  private:
 	typedef void (Harl::*MemFuncPtr)(void);
+	
 	MemFuncPtr pointer_[4];
 	static const std::string levels[4];
 
